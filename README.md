@@ -6,7 +6,7 @@ Crear una base de datos, el valor por defecto para el nombre es `pokemon`.
 Descargar el JAR de 
 
 ````
-wget https://github.com/estebancabezudo/pokemon/blob/43a6689054ca58f3551190d45f2741b42b7e5fa1/demo-0.0.1-SNAPSHOT.jar?raw=true -O demo-0.0.1-SNAPSHOT.jar
+wget https://github.com/estebancabezudo/pokemon/raw/master/demo-0.0.1-SNAPSHOT.jar
 
 ````
 
