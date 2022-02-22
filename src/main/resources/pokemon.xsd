@@ -1,0 +1,139 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://cabezudo.net/pokemon"
+	targetNamespace="http://cabezudo.net/pokemon"
+	elementFormDefault="qualified">
+
+	<xs:element name="abilitiesRequest" type="tns:AbilitiesRequest" />
+	<xs:element name="abilitiesResponse" type="tns:AbilitiesResponse" />
+	
+	<xs:complexType name="AbilitiesRequest">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AbilitiesResponse">
+		<xs:sequence>
+			<xs:element name="abilities" type="tns:ability_data" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="base_experienceRequest" type="tns:BaseExperienceRequest" />
+	<xs:element name="base_experienceResponse" type="tns:BaseExperienceResponse" />
+
+	<xs:complexType name="BaseExperienceRequest">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BaseExperienceResponse">
+		<xs:sequence>
+			<xs:element name="base_experience" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="held_itemsRequest" type="tns:HeldItemsRequest" />
+	<xs:element name="held_itemsResponse" type="tns:HeldItemsResponse" />
+
+	<xs:complexType name="HeldItemsRequest">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="HeldItemsResponse">
+		<xs:sequence>
+			<xs:element name="held_items" type="tns:held_item" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="idRequest" type="tns:IdRequest" />
+	<xs:element name="idResponse" type="tns:IdResponse" />
+
+	<xs:complexType name="IdRequest">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="IdResponse">
+		<xs:sequence>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="nameRequest" type="tns:NameRequest" />
+	<xs:element name="nameResponse" type="tns:NameResponse" />
+
+	<xs:complexType name="NameRequest">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="NameResponse">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="location_area_encountersRequest" type="tns:LocationAreaEncountersRequest" />
+	<xs:element name="location_area_encountersResponse" type="tns:LocationAreaEncountersResponse" />
+
+	<xs:complexType name="LocationAreaEncountersRequest">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="LocationAreaEncountersResponse">
+		<xs:sequence>
+			<xs:element name="location_area_encounters" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ability_data">
+		<xs:sequence>
+			<xs:element name="ability" type="tns:ability" />
+			<xs:element name="is_hidden" type="xs:boolean" />
+			<xs:element name="slot" type="xs:integer" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ability">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="url" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="held_item">
+		<xs:sequence>
+			<xs:element name="item" type="tns:item" />
+			<xs:element name="version_details" type="tns:version_detail" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="item">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="url" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="version_detail">
+		<xs:sequence>
+			<xs:element name="rarity" type="xs:integer" />
+			<xs:element name="version" type="tns:version" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="version">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="url" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
