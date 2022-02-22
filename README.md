@@ -23,7 +23,7 @@ export MYSQL_USER=[usuario_de_base_de_datos]
 export MYSQL_PASSWORD=[contraseña_de_base_de_datos]
 ````
 
-Ejecutar en el directori donde bajamos el jar
+Ejecutar en el directorio donde bajamos el jar
 
 ````
 java -jar demo-0.0.1-SNAPSHOT.jar
