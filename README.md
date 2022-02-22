@@ -1,7 +1,7 @@
 # Ejecución
 ## Linux
 
-Crear una base de datos, el valor por defecto para el nombre es pokemon.
+Crear una base de datos, el valor por defecto para el nombre es `pokemon`.
 
 Descargar el JAR de 
 
